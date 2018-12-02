@@ -1,0 +1,115 @@
+\section{Experiments}
+We conduct various experiments to evaluate the effectiveness of the extracted features and Co-training framework on both \textit{KDDCUP Dataset} and \textit{XuetangX Large-Scale Dataset}.
+
+\subsection{Experimental Setup.} 
+	\noindent\textbf{Classifier.}
+	We use XGBoost as the classifier in our experiments, XGBoost is short for eXtreme Gradient Boosting\cite{Chen:2016:XST:2939672.2939785} which is an optimized distributed gradient boosting system with high efficiency, flexibility, and portability. It was implemented under the Gradient Boosting framework\cite{Friedman2001Greedy}. \\
+    %Comparing with the original Gradient Boosting algorithm, XGBoost utilize a more regularized model formalization to control over-fitting, which gives a better performance. \\
+    
+	\noindent \textbf{Comparison Methods.}
+	We conduct the comparison experiments for testing Co-training performance with the following methods:
+	\begin{itemize}
+		\item{\textbf{Logistic Regression Classifiers (LRC)}}: The logistic regression model is used to predict user's dropout.
+		\item{\textbf{SVM}}: A linear kernel SVM is trained for predicting the dropout probability of each user.
+		\item{\textbf{Random Forest (RF)}}: All features are input to a Random Forest model to predict dropout probability.
+		\item{\textbf{XGBoost (XGB)}}: A single XGBoost model is used for this task.
+		\item{\textbf{Ensemble XGBoost ($\mathbf{XGB_{en}}$)}}:  Assembling $h_1$ and $h_2$ directly (Section \ref{sec:construct}) with XGBoost as the classifiers. The ensemble strategy is Average Weighted.
+		\item{\textbf{Co-training XGBoost ($\mathbf{XGB_{co}}$)}}: The Multi-view Co-training algorithm (in Section \ref{sec:co-training}) by adopting XGBoost as classifier.
+\end{itemize}	
+	For single models(\textbf{LRC, SVM,  RF, XGB}) above, we use all the features described in Section \ref{sec:allFeat} (including $\mathbf{Feat}_{a}, \mathbf{Feat}_{c}, \mathbf{Feat}_{u}$) as input. 
+	When training the models,  we tune the parameters using the average AUC on 5-fold cross validation(CV) with grid search algorithm, and use the best group of parameters in all experiments.\\
+	
+	\noindent \textbf{Evaluation Measures.} We evaluate the classification performance by using the Area Under the ROC Curve(AUC) and F1 Score(F1).
+	
+	\subsection{Co-training performance}
+	
+	\begin{table}
+		\centering
+		\caption{Overall Results on KDDCUP Dataset and Instructor-paced courses of XuetangX Large-Scale Dataset. }
+		\begin{tabular}{c|cc|cc}
+			\hline \hline
+			              &\multicolumn{2}{c|}{KDDCUP} &\multicolumn{2}{c}{XuetangX}\\
+			  Methods & AUC & F1 & AUC & F1  \\
+
+			 \hline
+			  LRC                      & 86.78 & 90.8:6   &  80.77 &91.42 \\
+			 \hline
+		     SVM                   &  89.56  & 91.75	   &   81.13  &91.37 \\
+			\hline
+			RF                       & 88.82  & 91.73  &82.72  &92.01 \\
+			\hline
+			 XGB 					&90.51 &92.78   & 83.53& 92.08\\
+			\hline
+			$\rm XGB_{en}$  &90.53  &92.80  & 83.56  &92.10\\
+			\hline
+		    $\rm XGB_{co}$ &\textbf{90.94} & \textbf{93.19} & \textbf{84.27}& \textbf{92.23} \\ 
+			\hline	\hline
+		\end{tabular}
+
+		\label{tab:allRes}
+	\end{table}
+	
+
+	Table \ref{tab:allRes} presents the results on \textit{KDDCUP Dataset} and Instructor-paced courses of \textit{XuetangX Large-Scale Dataset} for all comparison methods. Overall, $\rm XGB_{co}$ gets the best performance on both two datasets, and its AUC score on KDDCUP dataset achieves 90.94\%  which is comparable to the winner team of KDDCUP 2015\footnote{https://biendata.com/competition/kddcup2015/rank/}. Compared to LRC and SVM, $\rm XGB_{co}$ achieves 1.38-4.16\% and 3.14-3.50\% AUC score improvements on KDDCUP dataset and XuetangX dataset, respectively.
+  Random Forest and single XGBoost model also underperform. Moreover, by comparing the performance of XGB and $\rm XGB_{en}$, we find that assembling different views of XGBoost models only contributes limited improvements on this task. Again, it indicates that Co-training procedure, which makes use of unlabeled data, is helpful for enhancing the ensemble results.
+	
+	
+	\begin{table}
+		\caption{Feature Ablation Results on KDDCUP Dataset and Instructor-paced courses of XuetangX Large-Scale Dataset.}
+		\centering
+		\begin{tabular}{llcccc}
+		\hline \hline
+			&               & \multicolumn{2}{c}{KDDCUP} & \multicolumn{2}{c}{XuetangX} \\
+			\multicolumn{2}{l}{Features}                &AUC    & F1   & AUC    & F1   \\ \hline 
+			\multicolumn{2}{l}{All}                     & 90.51 & 92.78 & 83.53 & 92.08     \\ \hline
+			\multicolumn{2}{l}{- Activity}          &  87.76 & 91.21     &80.13	  &91.35   \\ 
+			& - Statistics                            & 88.78 & 91.43    &81.73   & 91.70  \\
+			& - LSTM                              & 90.22  & 92.61     & 81.70  & 91.69    \\ \hline
+			\multicolumn{2}{l}{- User}           &90.08  &92.56    & 81.97  & 91.73      \\
+			& - Demographics                       & 90.49  & 92.77     & 83.50 & 92.06      \\ 
+			& - Embedding                            & 90.26  & 92.66     & 82.82  & 91.89  \\ 
+			& - Influence                              &   90.23   & 92.65     & 82.84    &91.90  \\ \hline
+			\multicolumn{2}{l}{- Course}      & 90.02    & 92.45    & 81.80    & 91.71   \\
+			& - Category                              & 90.45       &92.75     &83.47   &92.05   \\ 
+			& - Embedding                          &   90.21        &92.64      &82.83  &91.90           \\ \hline \hline
+ \end{tabular}
+
+	  \label{tab:featImp}	
+	\end{table}
+	\subsection{Feature Importance}
+	In order to analyze the importances of different types of features, we conduct the feature ablation experiments on \textit{KDDCUP Dataset} and Instructor-paced courses of \textit{XuetangX Large-Scale Dataset}. Specifically, we first input all the features to the XGBoost classifier, then remove every type of features one by one to watch the variety of performance.
+	The ablation results are shown in Table \ref{tab:featImp}. We observe that all types of features are useful for these two datasets. Compared to User-related Features and Course-related Features, Activity Features are more important for this problem. For Activity Features, Statistical Features help improvement more than LSTM Features on \textit{KDDCUP Dataset}, though LSTM shows a bit better performance on \textit{XuetangX Large-Scale Dataset} than statistics. This is because that \textit{XuetangX Large-Scale Dataset} has much more training examples which can help LSTM get a better generalization. Moreover, Embedding Features for User and Course achieve a better performance than traditional One-hot Features (including User Demographics and Course Category), and the Influence Features from Friends also contribute to the improvement on these two datasets.
+	\subsection{Discussion for Self-paced Courses}
+	
+		\begin{table}
+		\centering
+		\caption{Results on Self-paced Courses }
+		\begin{tabular}{ccccccc}
+			\hline
+			\hline
+			Methods & LRC & SVM &RF & XGB &$\rm XGB_{en}$& $\rm XGB_{co}$ \\
+			\hline
+			AUC    & 69.76 & 71.23 & 72.34 &73.67 & 74.10 & 74.27 \\
+			\hline
+			\hline		
+		\end{tabular}
+
+		\label{tab:selfRes}
+	\end{table}
+	Besides experiments on Instructor-paced courses, we also conduct the same experiments on Self-paced courses of \textit{XuetangX Large-Scale Dataset}. As shown in table \ref{tab:selfRes}, all the prediction results on Self-paced courses are rather lower than the results on Instructor-paced courses (table \ref{tab:allRes}). This is because Self-paced courses give more freedom to students, and do not require students to learn within a specified time. Therefore, there are more uncertainty for dropout prediction on Self-paced courses.
+
+
+    %This is because of the big difference between this two kinds of courses: Instructor-paced courses follow a schedule that the instructor sets, assignments and exams of which have specific due dates. 
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5cm,height=3.5cm]{snapshot.pdf}
+		
+		\caption{A Snapshot of the Online System. If a user is identified as risk of dropout by our prediction framework, LittleMu will remind the user that there are some new materials updated on the course.} 
+		\label{fig:snapshot}
+	\end{figure}
+	\subsection{Online System}
+	We deployed our framework on the \textit{LittleMu} system, an intelligent teaching assistant system on XuetangX, for facilitating user retention.
+	Specifically, for each course, we first provide online dropout prediction for all enrolled users. Then if a user's dropout probability is greater than a threshold, LittleMu would remind her to learn on the courses by sending him a message: \emph{``There are some new materials updated on the course, do you want to take a look?''}. Figure \ref{fig:snapshot} shows a snapshot of the system. This strategy is
+based on our investigation for students' dropout reasons on XuetangX,  of which results indicate that over
+20\% students drop out from XuetangX because no one remind them to learn on their enrolled courses.
+		

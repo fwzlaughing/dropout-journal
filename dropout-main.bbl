@@ -1,0 +1,267 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Anderson \bgroup et al\mbox.\egroup
+  }{2014}]{Anderson:2014:EMO:2566486.2568042ß}
+Anderson, A.; Huttenlocher, D.; Kleinberg, J.; and Leskovec, J.
+\newblock 2014.
+\newblock Engaging with massive online courses.
+\newblock In {\em Proceedings of the 23rd International Conference on World
+  Wide Web},  687--698.
+
+\bibitem[\protect\citeauthoryear{Balakrishnan and
+  Coetzee}{2013}]{balakrishnan2013predicting}
+Balakrishnan, G., and Coetzee, D.
+\newblock 2013.
+\newblock Predicting student retention in massive open online courses using
+  hidden markov models.
+\newblock {\em Electrical Engineering and Computer Sciences University of
+  California at Berkeley}.
+
+\bibitem[\protect\citeauthoryear{Bayer \bgroup et al\mbox.\egroup
+  }{2012}]{bayer2012predicting}
+Bayer, J.; Bydzovsk{\'a}, H.; G{\'e}ryk, J.; Obsivac, T.; and Popelinsky, L.
+\newblock 2012.
+\newblock Predicting drop-out from social behaviour of students.
+\newblock {\em International Educational Data Mining Society}.
+
+\bibitem[\protect\citeauthoryear{Chaturvedi, Goldwasser, and
+  Daum{\'e}~III}{2014}]{chaturvedi2014predicting}
+Chaturvedi, S.; Goldwasser, D.; and Daum{\'e}~III, H.
+\newblock 2014.
+\newblock Predicting instructor's intervention in mooc forums.
+\newblock In {\em Proceedings of the 52nd Annual Meeting of the Association for
+  Computational Linguistics},  1501--1511.
+
+\bibitem[\protect\citeauthoryear{Chen and
+  Guestrin}{2016}]{Chen:2016:XST:2939672.2939785}
+Chen, T., and Guestrin, C.
+\newblock 2016.
+\newblock Xgboost: A scalable tree boosting system.
+\newblock In {\em Proceedings of the 22Nd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining},  785--794.
+
+\bibitem[\protect\citeauthoryear{Dalipi, Imran, and
+  Kastrati}{2018}]{dalipi2018mooc}
+Dalipi, F.; Imran, A.~S.; and Kastrati, Z.
+\newblock 2018.
+\newblock Mooc dropout prediction using machine learning techniques: Review and
+  research challenges.
+\newblock In {\em Global Engineering Education Conference (EDUCON), 2018 IEEE},
+   1007--1014.
+\newblock IEEE.
+
+\bibitem[\protect\citeauthoryear{Fei and Yeung}{2015}]{Fei2015}
+Fei, M., and Yeung, D.-Y.
+\newblock 2015.
+\newblock {Temporal Models for Predicting Student Dropout in Massive Open
+  Online Courses}.
+\newblock {\em 2015 IEEE International Conference on Data Mining Workshop
+  (ICDMW)}  256--263.
+
+\bibitem[\protect\citeauthoryear{Guo, Kim, and
+  Rubin}{2014}]{Guo:2014:VPA:2556325.2566239}
+Guo, P.~J.; Kim, J.; and Rubin, R.
+\newblock 2014.
+\newblock How video production affects student engagement: An empirical study
+  of mooc videos.
+\newblock In {\em Proceedings of the First ACM Conference on Learning @ Scale
+  Conference},  41--50.
+
+\bibitem[\protect\citeauthoryear{Halawa, Greene, and
+  Mitchell}{2014}]{halawa2014dropout}
+Halawa, S.; Greene, D.; and Mitchell, J.
+\newblock 2014.
+\newblock Dropout prediction in moocs using learner activity features.
+\newblock {\em Experiences and best practices in and around MOOCs}  3--12.
+
+\bibitem[\protect\citeauthoryear{He \bgroup et al\mbox.\egroup
+  }{2015}]{He:2015:IAS:2886521.2886563}
+He, J.; Bailey, J.; Rubinstein, B. I.~P.; and Zhang, R.
+\newblock 2015.
+\newblock Identifying at-risk students in massive open online courses.
+\newblock In {\em Proceedings of the Twenty-Ninth AAAI Conference on Artificial
+  Intelligence},  1749--1755.
+
+\bibitem[\protect\citeauthoryear{He \bgroup et al\mbox.\egroup
+  }{2016}]{He:2016:MMM:3015812.3015989}
+He, J.; Rubinstein, B. I.~P.; Bailey, J.; Zhang, R.; Milligan, S.; and Chan, J.
+\newblock 2016.
+\newblock Moocs meet measurement theory: A topic-modelling approach.
+\newblock In {\em Proceedings of the Thirtieth AAAI Conference on Artificial
+  Intelligence},  1195--1201.
+
+\bibitem[\protect\citeauthoryear{Kellogg}{2013}]{kellogg2013online}
+Kellogg, S.
+\newblock 2013.
+\newblock Online learning: How to make a mooc.
+\newblock {\em Nature}  369--371.
+
+\bibitem[\protect\citeauthoryear{Kim \bgroup et al\mbox.\egroup
+  }{2014}]{Kim:2014:UID:2556325.2566237}
+Kim, J.; Guo, P.~J.; Seaton, D.~T.; Mitros, P.; Gajos, K.~Z.; and Miller, R.~C.
+\newblock 2014.
+\newblock Understanding in-video dropouts and interaction peaks inonline
+  lecture videos.
+\newblock In {\em Proceedings of the First ACM Conference on Learning @ Scale
+  Conference},  31--40.
+
+\bibitem[\protect\citeauthoryear{Kingma and Ba}{2014}]{kingma2014adam}
+Kingma, D.~P., and Ba, J.
+\newblock 2014.
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}.
+
+\bibitem[\protect\citeauthoryear{Kizilcec, Piech, and
+  Schneider}{2013}]{Kizilcec:2013:DDA:2460296.2460330}
+Kizilcec, R.~F.; Piech, C.; and Schneider, E.
+\newblock 2013.
+\newblock Deconstructing disengagement: Analyzing learner subpopulations in
+  massive open online courses.
+\newblock In {\em Proceedings of the Third International Conference on Learning
+  Analytics and Knowledge},  170--179.
+
+\bibitem[\protect\citeauthoryear{Kloft \bgroup et al\mbox.\egroup
+  }{2014}]{Kloft2014}
+Kloft, M.; Stiehler, F.; Zheng, Z.; and Pinkwart, N.
+\newblock 2014.
+\newblock {Predicting MOOC Dropout over Weeks Using Machine Learning Methods}.
+\newblock  60--65.
+
+\bibitem[\protect\citeauthoryear{Nagrecha, Dillon, and
+  Chawla}{2017}]{Nagrecha:2017:MDP:3041021.3054162}
+Nagrecha, S.; Dillon, J.~Z.; and Chawla, N.~V.
+\newblock 2017.
+\newblock Mooc dropout prediction: Lessons learned from making pipelines
+  interpretable.
+\newblock In {\em Proceedings of the 26th International Conference on World
+  Wide Web Companion},  351--359.
+
+\bibitem[\protect\citeauthoryear{Nair and Hinton}{2010}]{nair2010rectified}
+Nair, V., and Hinton, G.~E.
+\newblock 2010.
+\newblock Rectified linear units improve restricted boltzmann machines.
+\newblock In {\em Proceedings of the 27th international conference on machine
+  learning (ICML-10)},  807--814.
+
+\bibitem[\protect\citeauthoryear{Onah, Sinclair, and
+  Boyatt}{2014}]{onah2014dropout}
+Onah, D.~F.; Sinclair, J.; and Boyatt, R.
+\newblock 2014.
+\newblock Dropout rates of massive open online courses: behavioural patterns.
+\newblock {\em EDULEARN'14}  5825--5834.
+
+\bibitem[\protect\citeauthoryear{Perozzi, Al-Rfou, and
+  Skiena}{2014}]{Perozzi:2014:DOL:2623330.2623732}
+Perozzi, B.; Al-Rfou, R.; and Skiena, S.
+\newblock 2014.
+\newblock Deepwalk: Online learning of social representations.
+\newblock In {\em Proceedings of the 20th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining},  701--710.
+
+\bibitem[\protect\citeauthoryear{Qiu \bgroup et al\mbox.\egroup
+  }{2016}]{Qiu:2016:MPL:2835776.2835842}
+Qiu, J.; Tang, J.; Liu, T.~X.; Gong, J.; Zhang, C.; Zhang, Q.; and Xue, Y.
+\newblock 2016.
+\newblock Modeling and predicting learning behavior in moocs.
+\newblock In {\em Proceedings of the Ninth ACM International Conference on Web
+  Search and Data Mining},  93--102.
+
+\bibitem[\protect\citeauthoryear{Ramesh \bgroup et al\mbox.\egroup
+  }{2014}]{Ramesh:2014:LLE:2893873.2894071}
+Ramesh, A.; Goldwasser, D.; Huang, B.; Daum{\'e}, III, H.; and Getoor, L.
+\newblock 2014.
+\newblock Learning latent engagement patterns of students in online courses.
+\newblock In {\em Proceedings of the Twenty-Eighth AAAI Conference on
+  Artificial Intelligence},  1272--1278.
+
+\bibitem[\protect\citeauthoryear{Ramesh \bgroup et al\mbox.\egroup
+  }{2015}]{ramesh2015weakly}
+Ramesh, A.; Kumar, S.~H.; Foulds, J.; and Getoor, L.
+\newblock 2015.
+\newblock Weakly supervised models of aspect-sentiment for online course
+  discussion forums.
+\newblock In {\em Proceedings of the 53rd Annual Meeting of the Association for
+  Computational Linguistics and the 7th International Joint Conference on
+  Natural Language Processing},  74--83.
+
+\bibitem[\protect\citeauthoryear{Reich}{2015}]{reich2015rebooting}
+Reich, J.
+\newblock 2015.
+\newblock Rebooting mooc research.
+\newblock {\em Science}  34--35.
+
+\bibitem[\protect\citeauthoryear{Rousseeuw}{1987}]{rousseeuw1987silhouettes}
+Rousseeuw, P.~J.
+\newblock 1987.
+\newblock Silhouettes: a graphical aid to the interpretation and validation of
+  cluster analysis.
+\newblock {\em Journal of computational and applied mathematics} 20:53--65.
+
+\bibitem[\protect\citeauthoryear{Seaton \bgroup et al\mbox.\egroup
+  }{2014}]{Seaton2014Who}
+Seaton, D.~T.; Bergner, Y.; Chuang, I.; Mitros, P.; and Pritchard, D.~E.
+\newblock 2014.
+\newblock Who does what in a massive open online course?
+\newblock {\em Communications of the Acm}  58--65.
+
+\bibitem[\protect\citeauthoryear{Shah}{2018}]{shah2018product}
+Shah, D.
+\newblock 2018.
+\newblock A product at every price: A review of mooc stats and trends in 2017.
+\newblock {\em Class Central}.
+
+\bibitem[\protect\citeauthoryear{Wang, Yu, and Miao}{2017}]{wang2017deep}
+Wang, W.; Yu, H.; and Miao, C.
+\newblock 2017.
+\newblock Deep model for dropout prediction in moocs.
+\newblock In {\em Proceedings of the 2nd International Conference on Crowd
+  Science and Engineering},  26--32.
+\newblock ACM.
+
+\bibitem[\protect\citeauthoryear{Whitehill \bgroup et al\mbox.\egroup
+  }{2015}]{whitehill2015beyond}
+Whitehill, J.; Williams, J.; Lopez, G.; Coleman, C.; and Reich, J.
+\newblock 2015.
+\newblock Beyond prediction: First steps toward automatic intervention in mooc
+  student stopout.
+
+\bibitem[\protect\citeauthoryear{Wolpert}{1992}]{wolpert1992stacked}
+Wolpert, D.~H.
+\newblock 1992.
+\newblock Stacked generalization.
+\newblock {\em Neural networks} 5(2):241--259.
+
+\bibitem[\protect\citeauthoryear{Xing \bgroup et al\mbox.\egroup
+  }{2016}]{xing2016temporal}
+Xing, W.; Chen, X.; Stein, J.; and Marcinkowski, M.
+\newblock 2016.
+\newblock Temporal predication of dropouts in moocs: Reaching the low hanging
+  fruit through stacking generalization.
+\newblock {\em Computers in Human Behavior}  119--129.
+
+\bibitem[\protect\citeauthoryear{Yang \bgroup et al\mbox.\egroup
+  }{2013}]{yang2013turn}
+Yang, D.; Sinha, T.; Adamson, D.; and Ros{\'e}, C.~P.
+\newblock 2013.
+\newblock Turn on, tune in, drop out: Anticipating student dropouts in massive
+  open online courses.
+\newblock In {\em Proceedings of the 2013 NIPS Data-driven education workshop},
+  ~14.
+
+\bibitem[\protect\citeauthoryear{Zheng \bgroup et al\mbox.\egroup
+  }{2015}]{Zheng:2015:USM:2675133.2675217}
+Zheng, S.; Rosson, M.~B.; Shih, P.~C.; and Carroll, J.~M.
+\newblock 2015.
+\newblock Understanding student motivation, behaviors and perceptions in moocs.
+\newblock In {\em Proceedings of the 18th ACM Conference on Computer Supported
+  Cooperative Work},  1882--1895.
+
+\bibitem[\protect\citeauthoryear{Zhenghao \bgroup et al\mbox.\egroup
+  }{2015}]{zhenghao2015s}
+Zhenghao, C.; Alcorn, B.; Christensen, G.; Eriksson, N.; Koller, D.; and
+  Emanuel, E.
+\newblock 2015.
+\newblock Who’s benefiting from moocs, and why.
+\newblock {\em Harvard Business Review} 25.
+
+\end{thebibliography}

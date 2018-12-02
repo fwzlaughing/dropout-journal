@@ -1,0 +1,50 @@
+\begin{table}
+	\centering
+	\caption{The Description for User Activities on XuetangX.}
+	\setlength{\tabcolsep}{1.6mm}{
+	\begin{tabular}{|c|c|c|}
+		\hline
+		resource & action & description \\
+		\hline\hline	
+		\multirow{3}{*}{video}& watch & play and watch video \\
+		\cline{2-3}
+		& stop & pause video or watching video over\\
+		\cline{2-3}
+		& jump& jump to another position of video\\
+		\hline
+		\multirow{2}{*}{forum}& question & publish a question on forum \\
+		
+		\cline{2-3}
+		& answer & answer a question  on forum  \\
+		\hline
+		\multirow{3}{*}{assignment}& correct & submit a correct answer\\
+		\cline{2-3}
+		&wrong  & submit a wrong answer\\
+		\cline{2-3}
+		& reset & revise and resubmit an answer\\
+		\hline
+		\multirow{2}{*}{web page} &access & access a page in course \\
+		\cline{2-3}
+		& close  & close a page in course \\ 
+		\hline
+	\end{tabular}}
+	\label{ResourceAction}
+\end{table}
+
+\section{Problem Definition}
+		\label{ProblemDef}
+	The main task of dropout prediction is to predict a user whether dropout from a enrolled course in future. In order to formulate this problem, we introduce some necessary definitions.\\ 
+
+	\emph{Definition 1.} \textbf{Enrollment Relation}: Let $\mathbb{C}$ denotes the set of courses, and $\mathbb{U}$ denotes the set of users. 
+	The set of enrolled courses of $u\in \mathbb{U}$ is denoted by $\mathbb{C}_u\subset \mathbb{C}$, ($c\in\mathbb{C})$.  $\mathbb{U}_c\subset \mathbb{U}$ refers to the set of users which have enrolled in $c$. Then the set of enrollment relations is defined as $\mathbb{E}=\{(u,c)|u\in \mathbb{U}, c\in \mathbb{C}_u\}$.\\ 
+	
+	\emph{Definition 2.} \textbf{Learning Activity}: 
+	Each course has a set of available resources for users, such as video, forum and so on, here we use $R$ to represent the resource set of course in MOOCs. For each resource $r \in R$, there are a set of specific actions for it. We use $A$ to denote the action set. In this work, we have summarized four kinds of resources in MOOCs: \emph{video, forum, assignment, web page}, which are showed in table \ref{ResourceAction} together with the corresponding actions. \\
+	%\item $T$ is a set of discrete timestamps. 
+	Then a learning activity record of $u\in \mathbb{U}$ on one enrolled course $c\in \mathbb{U}_c$ at time $t$ can be represented as $X=(u,c,r,a,t)$, where $r\in R$ is the resource $u$ has accessed, $a\in A$ is the corresponding action on $r$. For each $(u,c) \in \mathbb{E}$, we use $\mathcal{X}_{uc}$ to represent user $u$'s historical learning activity set on $c$.\\
+	
+	\emph{Definition 3.} \textbf{Dropout Prediction}: 
+	Given $(u, c, \mathcal{X}_{uc})$, our goal is to predict whether user $u$ will dropout from course $c$ in future. More precisely, let $y_{uc}$ denotes the ground truth of whether $u$ will dropout, $y$ is positive if and only if \emph{$u$ will not take activities on $c$ in future.} Then our task is to learn a function:
+	 $$f: (u,c,\mathcal{X}_{uc})\to y_{uc}$$
+	
+

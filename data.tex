@@ -1,0 +1,54 @@
+\section{Dataset}
+		
+		\begin{table}
+		\centering
+		\caption{The Description of KDDCUP and XuetangX Dataset.}
+			\setlength{\tabcolsep}{1.3mm}{\begin{tabular}{c|c|c|cc}
+			\hline \hline
+			 & & \textbf{KDDCUP} & \multicolumn{2}{c}{\textbf{XuetangX}}  \\
+			\hline
+			&     & ISTR-paced & ISTR-paced  & Self-paced \\
+			\hline
+			\multirow{3}{*}{log} & video \# & 1319032 &50678849&  38225417 \\
+
+			& forum \# & 1076322& 443554 &   90815\\
+
+			& problem \#& 2089933& 7773245& 3139558 \\
+
+			& web page \# & 7380344 & 9231061 & 5496287\\
+			\hline
+			\multirow{5}{*}{enrollment} & total \# &  200904  & 467113 & 218274\\
+
+			& drop \# & 159223 &372088 & 205988\\
+
+			& non-drop \# &41681 & 95025 & 12286\\
+
+			&  user \#&  112448       &254518 & 123719\\
+
+			&  course \#&    39      & 698& 515\\	
+			\hline \hline
+		\end{tabular}}
+		\label{tab:dataDes}
+	\end{table}
+    \subsection{Data Description}
+	We use KDD Cup 2015 dataset and XuetangX large scale dataset in this work, and both two datasets are come from XuetangX, one of the largest MOOCs platforms in China. XuetangX was launched in October 2013 as the partnership with edX, it has provided over 1000 course and attracted more than 8,000,000 registered users up to now. These courses cover various fields like \emph{computer science, economics, business, electronics, art, history}, etc. The statistics of two datasets are described in Table \ref{tab:dataDes}.\\
+	
+	\noindent \textbf{KDD Cup Dataset.}
+	KDD Cup 2015\footnote{https://biendata.com/competition/kddcup2015/} is one of the most heated competitions which aim to predict students' dropout in XuetangX, and have attracted 821 teams to participate in. We use the dataset in competition for our experiments. This data comes from 39 instructor-paced (ISTR-paced) courses, which consists of user-course enrollment relation, user log and course structure information.\\
+
+	\begin{figure}
+		\centering
+	\includegraphics[width=\linewidth]{course-span2.png}
+		
+		\caption{Construct \emph{history} Period and \emph{future} Period from Raw Data. The first $D_h$ days are set as\emph{history} period, and the next $D_f$ days are \emph{future} period.}
+		\label{fig:dataCons}
+	\end{figure}
+	\noindent \textbf{XuetangX Large Scale Dataset.}
+ 	Much more users and courses have joined in XuetangX since the end of KDD Cup 2015. In order to avoid the limited scale of data, we also construct a large dataset which consists of  much more information than KDD Cup dataset. This dataset contains 698 Instructor-paced courses, and 515 Self-paced courses.
+	
+	%To construct the data set, we first divide the course duration by every week. Suppose a course has $K$ weeks, then we use the first $K-1$ weeks as history period, and the $k$-th week as predict period, where $1<k<=K$.
+	
+	%Following above methodology, we finally construct 3494890 $(history, predict)$ data tuples for instructor-paced courses, and 936060 data tuples for self-pace courses. Then we sample 30\% data as test dataset, and set all the rest as train dataset.
+	
+	\subsection{Data Constructing}
+    In order to construct the dataset used for training model, we need to partition the whole course duration into $history$ period and $future$ period by hand. Figure \ref{fig:dataCons} shows the data construction strategy, we use the first $D_h$ days after the learning start time as $history$ period, while $future$ period is from $D_h$-th day to $(D_h+D_f)$-th day. For KDDCUP dataset and instructor-paced courses in XuetangX, the learning start time is defined as the course start time, but for self-paced courses, we adopt user's first visit time as learning start time on corresponding course. For KDDCUP dataset, $history$ period is set to the first $30$ days, and $future$ period is $30$-th day to $40$-day, i.e., $D_h=30, D_f=10$. As for XuetangX large scale dataset, we adopt different strategies for instructor-paced courses and self-paced courses. For instructor-paced courses, we set $D_h=35$, $D_f=10$, while for self-paced courses $D_h=60, D_f=15$.

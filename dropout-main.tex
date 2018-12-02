@@ -1,0 +1,99 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+\ifCLASSOPTIONcompsoc
+  \usepackage[nocompress]{cite}
+\else
+  \usepackage{cite}
+\fi
+\ifCLASSINFOpdf
+\else
+\fi
+\usepackage{times}  %Required
+\usepackage{helvet}  %Required
+\usepackage{courier}  %Required
+\usepackage{url}  %Required
+\usepackage{graphicx}  %Required
+\frenchspacing  %Required
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{multirow}
+\usepackage{makecell}
+%\usepackage[boxed]{algorithm2e}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{tabularx}
+\newcommand{\tracy}[1]{\textcolor{purple}{Tracy: #1}}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hboxd{E}\kern-.125emX}}
+\setcounter{secnumdepth}{0}  
+\newcommand{\reminder}[1]{\textbf{\color{red}[** #1 **]}}  % to fix
+\newcommand{\jt}[1]{\textcolor{red}{[JT: ** #1  **]}}
+\newcommand{\jsedit}[1]{\textcolor{blue}{\emph{[JS: #1]}}}
+\newcommand{\hide}[1]{} %hide
+\newcommand{\vpara}[1]{\vspace{0.06in}\noindent \textbf{#1}}%
+\newcommand{\para}[1]{\vspace{0.01in}\noindent\textbf{#1}}%
+\newcommand{\secref}[1]{Section~\ref{#1}} %section reference
+\newcommand{\Real}{\ensuremath{\mathbb{R}}}  % Real numbers
+\newcommand{\figref}[1]{Figure~\ref{#1}} %section reference
+\newcommand{\beq}[1]{\vspace{-0.02in}\begin{equation}#1\end{equation}\vspace{-0.02in}}
+\newcommand{\beqn}[1]{\vspace{-0.03in}\begin{eqnarray}#1\end{eqnarray}\vspace{-0.03in}}
+\newcommand{\beal}[1]{\vspace{-0.03in}\begin{align}#1\end{align}\vspace{-0.03in}}
+\newcommand{\besp}[1]{\begin{split}#1\end{split}}
+\newcommand{\modelname}[0]{CFIN}
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+\title{Understanding Dropouts in MOOCs}
+\author{Wenzheng Feng,\textsuperscript{$\dagger$} Jie Tang\textsuperscript{$\dagger$} \and Tracy Xiao Liu\textsuperscript{$\ddagger$} \\ 
+	\textsuperscript{$\dagger$}Department of Computer Science and Technology, Tsinghua University \\
+\textsuperscript{$\ddagger$}Department of Economics, School of Economics and Management, Tsinghua University\\
+fwz17@mails.tsinghua.edu.cn, jietang@tsinghua.edu.cn, liuxiao@sem.tsinghua.edu.cn
+
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem M. Shell was with the Department
+of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+GA, 30332.\protect\\
+E-mail: see http://www.michaelshell.org/contact.html
+\IEEEcompsocthanksitem J. Doe and J. Doe are with Anonymous University.}% <-this % stops an unwanted space
+\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Computer Society Journals}
+
+\IEEEtitleabstractindextext{%
+\input{abstract}
+
+
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+Computer Society, IEEE, IEEEtran, journal, \LaTeX, paper, template.
+\end{IEEEkeywords}}
+
+
+% make the title area
+
+	\maketitle
+	\input{intro}
+    \input{related}
+%	\input{preliminary}
+    \input{analysis}
+    
+    %%co-training version:
+	 %\input{feature} 
+     %\input{co-train}
+     %\input{exp}
+     
+     %%deep model version:
+     \input{deep_model}
+     \input{deep_exp}
+     \input{conclusion}
+     
+		
+\bibliographystyle{IEEEtran}
+	\bibliography{ref}
+	
+\end{document}

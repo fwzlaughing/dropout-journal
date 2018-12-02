@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: dropout-main.aux
+The style file: aaai.bst
+Database file #1: ref.bib
+Warning--empty journal in Kloft2014
+Warning--empty journal in whitehill2015beyond
+You've used 34 entries,
+            2568 wiz_defined-function locations,
+            767 strings with 12046 characters,
+and the built_in function-call counts, 16996 in all, are:
+= -- 1863
+> -- 672
+< -- 26
++ -- 231
+- -- 230
+* -- 1236
+:= -- 2566
+add.period$ -- 171
+call.type$ -- 34
+change.case$ -- 251
+chr.to.int$ -- 34
+cite$ -- 36
+duplicate$ -- 730
+empty$ -- 1165
+format.name$ -- 287
+if$ -- 3687
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 34
+newline$ -- 208
+num.names$ -- 102
+pop$ -- 250
+preamble$ -- 1
+purify$ -- 285
+quote$ -- 0
+skip$ -- 652
+stack$ -- 0
+substring$ -- 997
+swap$ -- 290
+text.length$ -- 26
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 272
+warning$ -- 2
+while$ -- 147
+width$ -- 36
+write$ -- 474
+(There were 2 warnings)

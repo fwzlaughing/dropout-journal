@@ -1,0 +1,39 @@
+\section{Related Work}
+%\subsection
+
+%\vpara{Dropout Prediction.}
+%\textit{Methods used in prior studies} 
+%predict student dropout using features extracted from user log, 
+  Prior studies apply generalized linear models (including logistic regression and linear SVMs~\cite{Kloft2014,He:2015:IAS:2886521.2886563}) to predict dropout. Balakrishnan et al.~\cite{balakrishnan2013predicting} present a hybrid model which combines Hidden Markov Models (HMM) and logistic regression  to predict student retention on a single course. Another attempt by Xing et al.~\cite{xing2016temporal} uses an ensemble stacking generalization approach to build robust and accurate prediction models.
+%rather than directly applying base models. 
+Deep learning methods are also used for predicting dropout. For example, Fei et al.~\cite{Fei2015} tackle this problem from a sequence labeling perspective and apply an RNN based model to predict students' dropout probability. Wang et al.~\cite{wang2017deep} propose a hybrid deep neural network dropout prediction model by combining the CNN and RNN.
+	Ramesh et al.~\cite{Ramesh:2014:LLE:2893873.2894071} develop a probabilistic soft logic (PSL) framework to predict user retention by modeling student engagement types using latent variables. Cristeaet et al.~\cite{cristea2018earliest} propose a light-weight method which can predict dropout before user start learning only based on her/his registration date.
+Besides prediction itself, Nagrecha et al.~\cite{Nagrecha:2017:MDP:3041021.3054162}  focus on the interpretability of existing  dropout prediction methods. Whitehill et al.~\cite{whitehill2015beyond} design an online intervention strategy to boost users' call-back in MOOCs. Dalipi et al.~\cite{dalipi2018mooc} review the techniques of dropout prediction and propose several insightful suggestions for this task. What's more, XuetangX has organized the KDDCUP 2015\footnote{https://biendata.com/competition/kddcup2015} for dropout prediction. In that competition, most teams adopt assembling strategies to improve the prediction performance, and ``Intercontinental Ensemble'' team get the best performance by assembling over sixty single models.
+%The authors explore each stage of the prediction pipeline %and propose some insights of why a 
+	 
+     
+%\subsection
+%\vpara{Engagement Pattern Mining.} 
+More recent works mainly focus on analyzing students engagement based on statistical methods and 
+%some of them 
+explore how to improve student engagements~\cite{kellogg2013online,reich2015rebooting}. 
+\hide{
+Kizilcec et al.~\cite{Kizilcec:2013:DDA:2460296.2460330} employ a cluster method to identify the longitudinal engagement trajectories. Anderson et al.~\cite{Anderson:2014:EMO:2566486.2568042ß} provide a taxonomy for student engagement patterns and study the relationship between student grades and their engagement. Guo et al.~\cite{Guo:2014:VPA:2556325.2566239} analyze how student engagement pattern varies with different video types. Kim et al.~\cite{Kim:2014:UID:2556325.2566237} discover high dropout rate often occurs in long videos, and students who re-watch videos are more likely to drop out than  first-time watchers. }%
+Zheng et al.~\cite{Zheng:2015:USM:2675133.2675217} apply the grounded theory  to study users' motivations for choosing a course
+%, their learning perceptions and engagement patterns, and 
+and to understand 
+%underlying 
+the reasons that users drop out a course. Qiu et al.~\cite{Qiu:2016:MPL:2835776.2835842} study the relationship between student engagement and their certificate rate, and propose a latent dynamic factor graph (LadFG) to model and predict learning behavior in MOOCs. 
+\hide{
+Chaturvedi et al.~\cite{chaturvedi2014predicting} propose a framework to predict instructor's intervention on forums. 
+Ramesh et al.~\cite{ramesh2015weakly} develop a weakly supervised joint model for aspect-sentiment analysis in forums. 
+Maximilian et al.~\cite{He:2016:MMM:3015812.3015989} use topic models for the psychometric testing of MOOC students based on their forum activities. 
+Utilizing data from a Coursera class, Yang et al.~\cite{yang2013turn} use a survival model to measure the impact of certain factors on dropout rate.
+Some other related study could be also found in~\cite{bayer2012predicting}.
+, e.g., factors related to student behavior and social positioning within discussion forums. Other social behavior, such as email and discussion board conversation, is also shown as effective factors for predicting dropout \cite{bayer2012predicting}.
+}
+
+%\subsection{Co-training}
+	%As a most efficient semi-supervised method, co-training framework is introduced by Blum and Mitchel in \cite{Blum:1998:CLU:279943.279962}. With training multiple learners for one task, the unlabeled samples are utilized to augment training set for each leaner. Following this idea, a number of studies emerge to explore the potentials of co-training. For example,  Nigam et al. \cite{Nigam:2000:AEA:354756.354805} performed extensive experiments for comparing the performance of co-training and other popular semi-supervised algorithm, EM-algorithm\cite{10.2307/2984875}. And the experiments showed that co-training outperforms EM even on tasks where there is no natural split of features.Zhou et al. \cite{Zhou:2005:SRC:1642293.1642439} has proposed a novel co-training style regression algorithm, this algorithm used two $k$-nearest neighbor regressors with different distance metrics, and experiments show that it can effectively exploit unlabeled data to improve regression estimates. In \cite{Zhang:2014:ACS:2600428.2609599}, co-training algorithm was applied to address the cold-start problem in recommender systems, authors combined the factorization model co-training algorithm to capture fine-grained user-item context. 
+	%the experiments on real-word datasets show that the recommendation accuracy is significantly improved compared to standard algorithms and the cold-start problem is largely alleviated.
+	
